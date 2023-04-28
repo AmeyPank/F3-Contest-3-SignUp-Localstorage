@@ -40,7 +40,7 @@ function signup(event) {
         // Redirect to profile page and display user details
         setTimeout(function() {
             window.location.href = '/profile.html';
-        }, 3000);
+        }, 2000);
 
     }
 
