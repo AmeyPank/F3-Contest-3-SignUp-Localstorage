@@ -6,6 +6,12 @@ var password = document.getElementById('password');
 var cpassword = document.getElementById('cpassword');
 var signupBtn = document.getElementById('signup-btn');
 
+if(localStorage.getItem("user")){
+    // let name = JSON.parse(localStorage.getItem("user")).fullname;
+    alert( "you are already signed in");
+    window.location.href  ="./profile.html";
+  }
+
 function signup(event) {
     event.preventDefault();
 
@@ -67,6 +73,7 @@ var user = JSON.parse(localStorage.getItem('user'));
 function proClick(){
 if (user.token) 
     {
+       
         window.location.href = "/profile.html";
     }else{
         window.location.href = "/index.html";

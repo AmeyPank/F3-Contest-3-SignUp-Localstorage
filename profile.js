@@ -20,11 +20,7 @@ if (user) {
     // Add a click event listener to the logout button
     logoutBtn.addEventListener('click', function () {
         // Remove user data from local storage
-        window.location.reload();
         localStorage.removeItem('user');
-
-        // Remove access token from local storage (if it exists)
-        localStorage.removeItem('token');
         window.location.href = "/index.html";
         // Reload the page to update UI
 
@@ -49,6 +45,7 @@ function proClick() {
 }
 function signClick() {
     if (user) {
+        alert("You are already logged in")
         window.location.href = "/profile.html";
     } else {
         window.location.href = "/index.html";
